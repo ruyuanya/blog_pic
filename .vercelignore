@@ -1,0 +1,37 @@
+# .vercelignore
+# 仅对 `vercel` / `vercel --prod` 这类 CLI 部署生效（Git 集成部署会完整 clone 仓库，不读此文件）。
+# 原则：只排除"不需要公开访问"的东西，宁少勿多 —— 图床项目排错一个图片就会直接导致线上 404。
+
+# ---- 版本控制与 CI ----
+.git
+.gitignore
+.gitattributes
+.github
+
+# ---- 编辑器与操作系统垃圾 ----
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 依赖与构建产物 ----
+node_modules
+dist
+build
+.vercel
+*.tsbuildinfo
+
+# ---- 本工作区元数据（诊断记录、会话数据，不需要对外暴露） ----
+.workbuddy
+
+# ---- 文档类，不需要被当成静态资源发布 ----
+*.md
+LICENSE
+
+# ---- 临时与备份文件 ----
+*.log
+*.tmp
+*.bak
+*.swp
+*~
